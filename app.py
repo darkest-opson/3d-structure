@@ -2,7 +2,11 @@ import streamlit as st
 import requests
 import py3Dmol
 import io
-
+# Set page config with favicon and tab title
+st.set_page_config(
+    page_title="dbacp - 3D visualisation",
+    page_icon=" "  # You can use an emoji or a path to a .ico/.png file
+)
 # Retrieve peptide sequence from query params
 query_params = st.query_params
 peptide_seq = query_params.get("sequence", "")
