@@ -5,7 +5,7 @@ import io
 # Set page config with favicon and tab title
 st.set_page_config(
     page_title="dbacp - 3D visualisation",
-    page_icon=" "  # You can use an emoji or a path to a .ico/.png file
+    page_icon="📥"  # You can use an emoji or a path to a .ico/.png file
 )
 # Retrieve peptide sequence from query params
 query_params = st.query_params
@@ -45,7 +45,7 @@ try:
 
     if response.status_code == 200:
         pdb_string = response.content.decode('utf-8')
-        st.success("Get your 3D structure predicted by ESM-Fold")
+        st.success("Your 3D structure predicted by ESM-Fold")
 
         # Show 3D model
         show_pdb(pdb_string)
