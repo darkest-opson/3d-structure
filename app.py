@@ -14,7 +14,7 @@ accession = query_params.get("accession", "")
 
 
 # Show input
-st.subheader("Visualise your 3D structure here")
+st.subheader("Visualise and download your 3D structure here")
 if peptide_seq:
     st.write("dbACP accession id")
     st.code(accession)
