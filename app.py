@@ -40,12 +40,12 @@ try:
         'https://api.esmatlas.com/foldSequence/v1/pdb/', 
         headers=headers,
         data=peptide_seq,
-        verify=True  # ⚠️ For demo only, disable in production
+        verify=True
     )
 
     if response.status_code == 200:
         pdb_string = response.content.decode('utf-8')
-        st.success("Your 3D structure predicted by ESM-Fold")
+        st.success("3D structure is available below.")
 
         # Show 3D model
         show_pdb(pdb_string)
@@ -62,4 +62,4 @@ try:
         st.error(f"API error: {response.status_code}")
 
 except Exception as e:
-    st.error(f"Error in fetching or rendering structure: {e}")
+    st.error("Some error has been occurred!")
