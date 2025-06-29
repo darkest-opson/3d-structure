@@ -55,7 +55,7 @@ try:
         st.download_button(
             label="📥 Download PDB File",
             data=pdb_file,
-            file_name="predicted_structure.pdb",
+            file_name=f"{accession}.pdb",
             mime="chemical/x-pdb"
         )
     else:
