@@ -39,7 +39,7 @@ try:
     response = requests.post(
         'https://api.esmatlas.com/foldSequence/v1/pdb/', 
         headers=headers,
-        data=peptide_seq.upper(),
+        data=peptide_seq,
         verify=True
     )
 
