@@ -4,11 +4,13 @@ import py3Dmol
 import io
 
 
+# Hide Streamlit header, footer, and menu completely
 hide_streamlit_style = """
-<style>
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-</style>
+    <style>
+    #MainMenu {visibility: hidden;}      /* menu icon */
+    footer {visibility: hidden;}         /* footer */
+    header {visibility: hidden;}         /* top header bar */
+    </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 # Set page config with favicon and tab title
@@ -72,5 +74,6 @@ try:
 
 except Exception as e:
     st.error("Some error has been occurred!")
+
 
 
