@@ -2,6 +2,16 @@ import streamlit as st
 import requests
 import py3Dmol
 import io
+
+
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
 # Set page config with favicon and tab title
 st.set_page_config(
     page_title="dbacp - 3D visualisation",
@@ -63,3 +73,4 @@ try:
 
 except Exception as e:
     st.error("Some error has been occurred!")
+
