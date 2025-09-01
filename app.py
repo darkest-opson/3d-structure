@@ -3,16 +3,17 @@ import requests
 import py3Dmol
 import io
 
-
-# Hide Streamlit header, footer, and menu completely
 hide_streamlit_style = """
     <style>
-    #MainMenu {visibility: hidden;}      /* menu icon */
-    footer {visibility: hidden;}         /* footer */
-    header {visibility: hidden;}         /* top header bar */
+    #MainMenu {visibility: hidden;}  /* hides menu including fullscreen */
+    footer {visibility: hidden;}     /* hides "Built with Streamlit 🎈" */
+    header {visibility: hidden;}     /* hides top header */
     </style>
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+
+
 # Set page config with favicon and tab title
 st.set_page_config(
     page_title="dbacp - 3D visualisation",
@@ -74,6 +75,7 @@ try:
 
 except Exception as e:
     st.error("Some error has been occurred!")
+
 
 
 
